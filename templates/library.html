@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library</title>
+</head>
+<body>
+    <h1>Library</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <ul>
+    {% for file in files %}
+        <li>
+            <img src="{{ file.thumbnailLink }}" alt="thumbnail" width="100" /><br>
+            {{ file.name }} (<a href="https://drive.google.com/uc?id={{ file.id }}&export=download">download</a>)
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

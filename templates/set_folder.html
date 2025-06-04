@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Folder</title>
+</head>
+<body>
+    <h1>Set Google Drive Folder ID</h1>
+    <form method="post" action="{{ url_for('set_folder') }}">
+        <input type="text" name="folder_id" placeholder="Folder ID" required>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

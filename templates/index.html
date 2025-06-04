@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ebook Library</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    {% if 'credentials' in session %}
+        <a href="{{ url_for('library') }}">Go to library</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+        <a href="{{ url_for('login') }}">Login with Google</a>
+    {% endif %}
+</body>
+</html>
